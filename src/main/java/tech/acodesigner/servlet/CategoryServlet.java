@@ -27,12 +27,14 @@ public class CategoryServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            String categoryId = request.getParameter("categoryId");
             ArrayList<CategoryDto> categories = CategoryDao.getCategories();
             HashMap<Integer, ArrayList<ArticleLiteDto>> articlesList = new HashMap<Integer, ArrayList<ArticleLiteDto>>();
             for (CategoryDto category : categories) {
                 ArrayList<ArticleLiteDto> articles = ArticleDao.getArticlesByCategoryId(category.getId());
                 articlesList.put(category.getId(), articles);
             }
+            request.setAttribute("categoryId",categoryId);
             request.setAttribute("categories", categories);
             request.setAttribute("articlesList", articlesList);
             request.setAttribute("mainPage", "category.jsp");

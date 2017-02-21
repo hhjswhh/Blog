@@ -22,7 +22,7 @@ public class ManageServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        req.setAttribute("mainPage","manageDetail.jsp");
         req.getRequestDispatcher("manage.jsp").forward(req, resp);
     }
 }

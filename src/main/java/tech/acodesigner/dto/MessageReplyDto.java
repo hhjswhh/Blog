@@ -1,19 +1,14 @@
 package tech.acodesigner.dto;
 
-import java.util.ArrayList;
-
 /**
- * Created by 77239 on 2017/2/11/0011.
+ * Created by 张秦遥 on 2017/2/20/0020.
  */
-public class MessageDto {
+public class MessageReplyDto {
     private Integer id;
-    private Integer type;
     private Integer pid;
     private String content;
     private String pubDate;
-    private Integer replyType;
     private UserDto user;
-    private ArrayList<MessageReplyDto> chirdren;
 
     public Integer getId() {
         return id;
@@ -21,14 +16,6 @@ public class MessageDto {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
     }
 
     public Integer getPid() {
@@ -55,27 +42,11 @@ public class MessageDto {
         this.pubDate = pubDate;
     }
 
-    public Integer getReplyType() {
-        return replyType;
-    }
-
-    public void setReplyType(Integer replyType) {
-        this.replyType = replyType;
-    }
-
     public UserDto getUser() {
         return user;
     }
 
     public void setUser(UserDto user) {
         this.user = user;
-    }
-
-    public ArrayList<MessageReplyDto> getChirdren() {
-        return chirdren;
-    }
-
-    public void setChirdren(ArrayList<MessageReplyDto> chirdren) {
-        this.chirdren = chirdren;
     }
 }

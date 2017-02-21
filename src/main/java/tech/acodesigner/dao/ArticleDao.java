@@ -157,6 +157,7 @@ public class ArticleDao {
             article.setClicks(rs.getInt("clicks"));
             UserDto userDto = new UserDto();
             userDto.setId(rs.getInt("userId"));
+            userDto.setUsername(rs.getString("username"));
             userDto.setImage(rs.getString("image"));
             article.setUser(userDto);
 

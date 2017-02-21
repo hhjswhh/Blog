@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col s10">
         <h1>归档</h1>
-        <div class="card-panel">
+        <div class="card-panel hoverable">
             <table>
                 <tbody>
                 <c:forEach var="article" items="${articles}">

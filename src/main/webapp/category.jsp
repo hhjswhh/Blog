@@ -13,7 +13,7 @@
         <ul class="collapsible popout">
             <c:forEach var="category" items="${categories}">
                 <li>
-                    <div class="collapsible-header">${category.name}<span class="badge">${category.count}</span></div>
+                    <div class="collapsible-header <c:if test='${categoryId==category.id}'>active</c:if> ">${category.name}<span class="badge">${category.count}</span></div>
                     <div class="collapsible-body">
                         <table>
                             <tbody>

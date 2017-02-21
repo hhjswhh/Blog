@@ -5,19 +5,21 @@
     <title>ACodesigner's Blog</title>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body class="grey lighten-4">
 <!--导航条-->
 <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper white">
-            <a href="#!" class="brand-logo indigo-text darken-3">ACodesigner's Blog</a>
+            <a href="home" class="brand-logo indigo-text darken-3">ACodesigner's Blog</a>
             <a href="#" data-activates="mobile-demo" class="right button-collapse grey-text"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="home" class="grey-text"><i class="material-icons left">home</i>首页</a></li>
                 <li><a href="category" class="grey-text"><i class="material-icons left">view_list</i>分类</a></li>
                 <li><a href="archive" class="grey-text"><i class="material-icons left">folder</i>归档</a></li>
-                <li><a href="message" class="grey-text"><i class="material-icons left">message</i>留言</a></li>
+                <li><a href="message?action=leaveMessage" class="grey-text"><i class="material-icons left">message</i>留言</a></li>
                 <li><a href="about" class="grey-text"><i class="material-icons left">error</i>关于</a></li>
                 <li><a href="login" class="waves-effect waves-green btn orange hoverable"><i
                         class="material-icons left">person</i>登录</a></li>
@@ -107,7 +109,5 @@
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

@@ -69,20 +69,20 @@ public class HomeServlet extends HttpServlet {
                 continue;
             }
             if (i == curPage) {
-                pageCode.append("<li class='active '><a href='#'>" + i
+                pageCode.append("<li class='active waves-effect'><a href='#'>" + i
                         + "</a></li>");
             } else {
-                pageCode.append("<li><a href='home?page=" + i + "'>" + i
+                pageCode.append("<li class='waves-effect'><a href='home?page=" + i + "'>" + i
                         + "</a></li>");
             }
         }
         if (curPage == totalPage) {
             pageCode.append("<li class='disabled'><a><i class=\"material-icons\">chevron_right</i></a></li>");
         } else {
-            pageCode.append("<li><a href='home?page=" + (curPage + 1)
+            pageCode.append("<li class='waves-effect'><a href='home?page=" + (curPage + 1)
                     + "'><i class=\"material-icons\">chevron_right</i></a></li>");
         }
-        pageCode.append("<li><a href='home?page=" + totalPage + "'><i class=\"material-icons\">last_page</i></a></li>");
+        pageCode.append("<li class='waves-effect'><a href='home?page=" + totalPage + "'><i class=\"material-icons\">last_page</i></a></li>");
         pageCode.append("</ul>");
         return pageCode.toString();
     }

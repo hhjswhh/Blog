@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
             } catch (NoSuchAlgorithmException e) {
                 e.printStackTrace();
             }
-//            user.setImage();
+            user.setImage("ted.jpg");
             try {
                 UserDao.save(user);
             } catch (SQLException e) {
@@ -47,10 +47,7 @@ public class LoginServlet extends HttpServlet {
                 if (user == null) {
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 } else {
-                    Cookie c = new Cookie("user", username + "#" + password);
-                    c.setMaxAge(60 * 60 * 24 * 7);
-                    response.addCookie(c);
-                    session.setAttribute("user", user);
+                    session.setAttribute("curUser", user);
                     if (user.getType() == 0) {
                         response.sendRedirect("home");
                     } else {

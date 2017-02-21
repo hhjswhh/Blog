@@ -21,7 +21,7 @@ public class LoginFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
         HttpSession session = request.getSession();
-        UserDto user = (UserDto) session.getAttribute("user");
+        UserDto user = (UserDto) session.getAttribute("curUser");
         String path = request.getServletPath();
         if (user != null) {
             if (user.getType() == 0 && path.contains("manage")) {

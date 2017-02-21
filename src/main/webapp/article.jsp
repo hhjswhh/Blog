@@ -19,7 +19,7 @@
                 <div class="card-content">
                         『${article.pubDate }』
                         <span>|</span>
-                        <a href="category?categoryId=${article.id}">${article.category.categoryName}</a>
+                        <a href="category?categoryId=${article.category.categoryId}">${article.category.categoryName}</a>
                         <span>|</span>
                         ${article.clicks}&nbspViews
                         <span>|</span>
