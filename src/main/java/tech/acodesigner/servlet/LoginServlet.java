@@ -4,6 +4,8 @@ import tech.acodesigner.dao.UserDao;
 import tech.acodesigner.dto.UserDto;
 import tech.acodesigner.po.UserPo;
 import tech.acodesigner.util.MD5Util;
+import tech.acodesigner.util.PictureUtil;
+import tech.acodesigner.util.PropertiesUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +24,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
         if (action.equals("register")) {
+            String userImage = request.getParameter("picture");
             UserPo user = new UserPo();
             user.setUsername(request.getParameter("username"));
             try {
@@ -29,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             } catch (NoSuchAlgorithmException e) {
                 e.printStackTrace();
             }
-            user.setImage("ted.jpg");
+            user.setImage(userImage);
             try {
                 UserDao.save(user);
             } catch (SQLException e) {
@@ -71,6 +74,9 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("mainPage", "loginCard.jsp");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else if (action.equals("preRegister")) {
+            String imageBasePath = getServletContext().getRealPath("images");
+            String[] userImages = PictureUtil.getPictures(imageBasePath, PropertiesUtil.getValue("userPicturePath"));
+            request.setAttribute("pictures", userImages);
             request.setAttribute("mainPage", "registerCard.jsp");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else if (action.equals("quit")) {

@@ -39,13 +39,12 @@
 <!--页面内容-->
 <div class="container">
     <div class="row ">
-
         <div class="col s8">
             <jsp:include page="${mainPage}"></jsp:include>
         </div>
         <!--搜索条-->
         <div class="col s4">
-            <nav style="margin: 20px 0px" class="indigo lighten-1 hoverable">
+            <nav style="margin-top: 30px;margin-bottom: 15px" class="indigo lighten-1 hoverable">
                 <div class="nav-wrapper">
                     <form method="post" action="home?search=true">
                         <div class="input-field">
@@ -57,7 +56,7 @@
                 </div>
             </nav>
 
-            <div class="card blue-grey darken-1 hoverable">
+            <div class="card grey hoverable">
                 <div class="card-content white-text">
                     <span class="card-title">最近文章</span>
                     <table>
@@ -70,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="card blue-grey darken-1 hoverable">
+            <div class="card grey hoverable">
                 <div class="card-content white-text">
                     <span class="card-title">最近回复</span>
                     <table>
@@ -91,9 +90,12 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                    content.</p>
+                <h5 class="white-text">反馈</h5>
+                <p class="grey-text text-lighten-4">
+                    如果您有什么建议或者发现了什么bug，可以通过我的邮箱反馈给我<br>
+                    <i class="material-icons left">mail</i>
+                    <a href="mailto:zhangqinyao123@gmail.com?subject=反馈">zhangqinyao123@gmail.com</a>
+                </p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">友情链接</h5>
@@ -108,7 +110,7 @@
     <div class="footer-copyright indigo darken-4">
         <div class="container">
             © 2017 ACodesigner
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a class="grey-text text-lighten-4 right" href="#!">MIT License</a>
         </div>
     </div>
 </footer>

@@ -8,6 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="row">
     <div class="col s10">
+        <br>
+        <nav class="indigo lighten-1">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="home" class="breadcrumb">首页</a>
+                    <a href="category?categoryId=${article.category.categoryId}" class="breadcrumb">${article.category.categoryName}</a>
+                    <a class="breadcrumb">留言</a>
+                </div>
+            </div>
+        </nav>
+        <br>
         <div class="card hoverable">
             <div class="card-content">
                 <span class="card-title">${article.title}</span>

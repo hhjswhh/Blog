@@ -24,12 +24,12 @@ public class LoginFilter implements Filter {
         UserDto user = (UserDto) session.getAttribute("curUser");
         String path = request.getServletPath();
         if (user != null) {
-            if (user.getType() == 0 && path.contains("manage")) {
+            if (user.getType() == 0 && path.contains("anage")) {
                 response.sendRedirect("home");
             } else {
                 chain.doFilter(req, resp);
             }
-        } else if (path.contains("manage")) {
+        } else if (path.contains("anage")) {
             response.sendRedirect("home");
         } else {
             chain.doFilter(req, resp);

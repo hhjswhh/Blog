@@ -17,7 +17,16 @@
 </script>
 <div class="row">
     <div class="col s10">
-        <h1>归档</h1>
+        <br>
+        <nav class="indigo lighten-1">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="home" class="breadcrumb">首页</a>
+                    <a class="breadcrumb">归档</a>
+                </div>
+            </div>
+        </nav>
+        <br>
         <div class="card-panel hoverable">
             <ul id="archive">
                 <c:forEach var="article" items="${articles}">

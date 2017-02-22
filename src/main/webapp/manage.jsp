@@ -27,8 +27,8 @@
                 <li><a href="articleManage" class="grey-text"><i class="material-icons left">border_color</i>文章</a></li>
                 <li><a href="categoryManage" class="grey-text"><i class="material-icons left">view_list</i>分类</a></li>
                 <li><a href="messageManage" class="grey-text"><i class="material-icons left">message</i>消息</a></li>
-                <li><a href="linkManage" class="grey-text"><i class="material-icons left">message</i>链接</a></li>
-                <li><a href="photoManage" class="grey-text"><i class="material-icons left">photo</i>图片</a></li>
+                <li><a href="linkManage" class="grey-text"><i class="material-icons left">open_in_browser</i>链接</a></li>
+                <li><a href="pictureManage" class="grey-text"><i class="material-icons left">photo</i>图片</a></li>
                 <li><a href="aboutManage" class="grey-text"><i class="material-icons left">error</i>关于</a></li>
                 <li><a href="login?action=quit" class="waves-effect waves-green btn orange hoverable"><i
                         class="material-icons left">person</i>退出登录</a></li>

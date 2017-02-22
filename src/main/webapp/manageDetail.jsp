@@ -11,6 +11,9 @@
         <div class="card-panel">
             <div class="center">
                 <h1>后台</h1>
+                <div class="center">
+                    <a href="home" class="waves-effect waves-light btn green hoverable">回到主页</a>
+                </div>
             </div>
         </div>
     </div>

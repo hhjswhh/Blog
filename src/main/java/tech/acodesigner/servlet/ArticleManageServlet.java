@@ -7,6 +7,8 @@ import tech.acodesigner.dto.ArticleDto;
 import tech.acodesigner.dto.ArticleLiteDto;
 import tech.acodesigner.dto.CategoryDto;
 import tech.acodesigner.po.ArticlePo;
+import tech.acodesigner.util.PictureUtil;
+import tech.acodesigner.util.PropertiesUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,12 +32,13 @@ public class ArticleManageServlet extends HttpServlet {
                 String content = request.getParameter("content");
                 String categoryId = request.getParameter("category");
                 String articleId = request.getParameter("articleId");
+                String picture = request.getParameter("picture");
                 ArticlePo article = new ArticlePo();
 
                 article.setTitle(title);
                 article.setContent(content);
                 article.setCategoryId(Integer.parseInt(categoryId));
-                article.setImage("root");
+                article.setImage(picture);
                 if (articleId != null && !articleId.equals("")) {
                     article.setClicks(ArticleDao.getArticleById(Integer.parseInt(articleId)).getClicks());
                     article.setArticleId(Integer.parseInt(articleId));
@@ -66,8 +69,14 @@ public class ArticleManageServlet extends HttpServlet {
                     ArticleDto article = ArticleDao.getArticleById(Integer.parseInt(id));
                     request.setAttribute("article", article);
                 }
+
                 ArrayList<CategoryDto> categories = CategoryDao.getCategories();
                 request.setAttribute("categories", categories);
+
+                String imageBasePath = getServletContext().getRealPath("images");
+                String[] articleImages = PictureUtil.getPictures(imageBasePath, PropertiesUtil.getValue("articlePicturePath"));
+                request.setAttribute("pictures", articleImages);
+
                 request.setAttribute("mainPage", "articleSaveManage.jsp");
                 request.getRequestDispatcher("manage.jsp").forward(request, response);
             } else if (action.equals("delete")) {

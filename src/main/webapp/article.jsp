@@ -7,13 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<h1>文章</h1>
+<br>
 <c:forEach var="article" items="${articles}">
     <div class="row">
         <div class="col s10">
             <div class="card small hoverable">
                 <div class="card-image">
-                    <img src="">
+                    <img src="images/article/${article.image}">
                     <span class="card-title">${article.title}</span>
                 </div>
                 <div class="card-content">

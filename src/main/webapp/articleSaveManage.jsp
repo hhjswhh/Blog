@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+    });
     function notEmpty() {
         var title = document.getElementById("title").value;
         var content = CKEDITOR.instances.content.getData();
@@ -37,10 +40,19 @@
                 </div>
                 <br><br><br><br>
                 <div class="input-field col s6">
-                    <select class="browser-default" id="category" name="category">
+                    <select id="category" name="category">
                         <option value="" disabled selected>类别</option>
                         <c:forEach var="category" items="${categories}">
                             <option value="${category.id }" ${category.id==article.category.categoryId?'selected':''}>${category.name}</option>
+                        </c:forEach>
+                    </select>
+                </div>
+                <br><br><br><br>
+                <div class="input-field col s6">
+                    <select id="picture" name="picture" class="icons">
+                        <option value="" disabled selected>图片</option>
+                        <c:forEach var="picture" items="${pictures}">
+                            <option value="${picture}" data-icon="images/article/${picture}" ${article.image==picture?'selected':'' }>${picture}</option>
                         </c:forEach>
                     </select>
                 </div>
