@@ -102,7 +102,7 @@ public class MessageDao {
 
     public static ArrayList<MessageDto> getRecentMessages() throws SQLException, ClassNotFoundException {
         Connection conn = DBUtil.getCon();
-        String sql = "select * from t_msg,t_user where t_msg.userId = t_user.userId order by pubDate desc limit 0,10";
+        String sql = "select * from blog_message t1,blog_user t2 where t1.userId = t2.userId order by pubDate desc limit 0,5";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         ArrayList<MessageDto> msgs = new ArrayList<MessageDto>();

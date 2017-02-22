@@ -63,8 +63,7 @@
                     <table>
                         <c:forEach var="recentArticle" items="${recentArticles}">
                             <tr class="hoverable">
-                                <td><a class="white-text"
-                                       href="article?articleId=${recentArticle.id}">${recentArticle.title}</a></td>
+                                <td><a class="white-text" href="article?articleId=${recentArticle.id}">${recentArticle.title}</a></td>
                             </tr>
                         </c:forEach>
                     </table>
@@ -74,8 +73,13 @@
             <div class="card blue-grey darken-1 hoverable">
                 <div class="card-content white-text">
                     <span class="card-title">最近回复</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                    <table>
+                        <c:forEach var="recentMessage" items="${recentMessages}">
+                            <tr class="hoverable">
+                                <td><a class="white-text" href="message?action=leaveMessage">${recentMessage.content}</a></td>
+                            </tr>
+                        </c:forEach>
+                    </table>
                 </div>
             </div>
         </div>
@@ -92,12 +96,11 @@
                     content.</p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text">友情链接</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    <c:forEach var="link" items="${links}">
+                        <li><a class="grey-text text-lighten-3" href="${link.url}" target="_blank">${link.linkName}</a></li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>

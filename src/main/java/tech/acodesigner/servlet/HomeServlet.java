@@ -1,8 +1,12 @@
 package tech.acodesigner.servlet;
 
 import tech.acodesigner.dao.ArticleDao;
+import tech.acodesigner.dao.LinkDao;
+import tech.acodesigner.dao.MessageDao;
 import tech.acodesigner.dto.ArticleDto;
 import tech.acodesigner.dto.ArticleLiteDto;
+import tech.acodesigner.dto.MessageDto;
+import tech.acodesigner.po.LinkPo;
 import tech.acodesigner.util.PageUtil;
 import tech.acodesigner.util.PropertiesUtil;
 
@@ -28,6 +32,11 @@ public class HomeServlet extends HttpServlet {
         try {
             ArrayList<ArticleLiteDto> recentArticles = ArticleDao.getRecentArticles();
             getServletContext().setAttribute("recentArticles", recentArticles);
+            ArrayList<MessageDto> recentMessages = MessageDao.getRecentMessages();
+            getServletContext().setAttribute("recentMessages",recentMessages);
+            ArrayList<LinkPo> links = LinkDao.getAllLinks();
+            getServletContext().setAttribute("links",links);
+
             String page = request.getParameter("page");
             String search = request.getParameter("search");
             String s_content = request.getParameter("s_content");
