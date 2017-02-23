@@ -25,6 +25,7 @@ public class ArticleServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         try {
             String id = request.getParameter("articleId");
             ArticleDto article = ArticleDao.getArticleById(Integer.parseInt(id));

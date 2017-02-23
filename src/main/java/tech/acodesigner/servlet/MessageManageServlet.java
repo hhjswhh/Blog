@@ -25,6 +25,7 @@ public class MessageManageServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         try {
             String action = request.getParameter("action");
             if (action == null || action.equals("")) {

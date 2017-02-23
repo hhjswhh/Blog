@@ -21,6 +21,7 @@ public class AboutServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         try {
             AboutDto about = ArticleDao.getAbout();
             request.setAttribute("about", about);

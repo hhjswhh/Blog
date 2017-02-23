@@ -25,6 +25,7 @@ import java.util.ArrayList;
 @WebServlet(name = "ArticleManageServlet", urlPatterns = "/articleManage")
 public class ArticleManageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         try {
             if (action.equals("save")) {
@@ -56,6 +57,7 @@ public class ArticleManageServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         try {
             if (action == null || action.equals("")) {

@@ -10,11 +10,11 @@
 <html>
 <head>
     <title>ACodesigner's Blog</title>
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+    <link href="//cdn.bootcss.com/materialize/0.98.0/css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/materialize/0.98.0/js/materialize.min.js"></script>
 </head>
 <body class="grey lighten-4">
 <!--导航条-->

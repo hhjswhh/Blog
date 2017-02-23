@@ -13,7 +13,7 @@
             <div class="nav-wrapper">
                 <div class="col s12">
                     <a href="home" class="breadcrumb">首页</a>
-                    <a class="breadcrumb">归档</a>
+                    <a class="breadcrumb">留言</a>
                 </div>
             </div>
         </nav>

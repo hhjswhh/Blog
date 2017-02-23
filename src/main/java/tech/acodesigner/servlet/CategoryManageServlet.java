@@ -19,6 +19,7 @@ import java.util.ArrayList;
 @WebServlet(name = "CategoryManageServlet", urlPatterns = "/categoryManage")
 public class CategoryManageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if (action.equals("save")) {
             String id = request.getParameter("categoryId");
@@ -39,6 +40,7 @@ public class CategoryManageServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         try {
             String action = request.getParameter("action");
             if (action == null || action.equals("")) {

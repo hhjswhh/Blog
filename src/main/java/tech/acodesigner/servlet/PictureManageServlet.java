@@ -28,6 +28,7 @@ public class PictureManageServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String imageBasePath = getServletContext().getRealPath("images");
         // System.out.println(imageBasePath);
         processUpload(request, response, imageBasePath);

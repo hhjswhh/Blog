@@ -17,6 +17,7 @@ import java.sql.SQLException;
 @WebServlet(name = "AboutManageServlet", urlPatterns = "/aboutManage")
 public class AboutManageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         if (action.equals("save")) {
             try {
@@ -32,6 +33,7 @@ public class AboutManageServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String action = request.getParameter("action");
         try {
             AboutDto about = ArticleDao.getAbout();
