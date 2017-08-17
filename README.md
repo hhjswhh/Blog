@@ -1,8 +1,10 @@
 # Blog
 
+> update：这个项目可能不再维护了，我已使用SSM框架对原项目进行重构,地址为[网址](https://github.com/Esieve/Blog_SSM)。不过该项目只需JSP、Servlet、Java基础就可上手，可以作为阶段练习项目。
+
 这是我的个人博客，[网址](http://www.acodesigner.tech)
 
-前端使用Materialize，后端使用JSP+Servlet，使用Maven作为项目管理工具，版本控制使用Git，开发工具使用Intellij IDEA，数据库使用MySQL,文本编辑模块使用CKEditor插件。
+前端使用Materialize，后端使用Servlet，使用Maven作为项目管理工具，版本控制使用Git，开发工具使用Intellij IDEA，数据库使用MySQL,文本编辑模块使用CKEditor插件，需要JDK1.8。
 #### 界面展示
 ![image](https://github.com/codesign-er/MarkdownPictures/raw/master/Blog/home.png)
 
